@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+body {
+    background-image: url("img/gradient_background_square.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #9CB2CE;
+    color: #E2F3F9;
+    font-family: Avenir; sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+Decoration "Return to homepage"
+**/
+
+.home {
+    padding: 1em;
+}
+
+.home a {
+    color: #E2F3F9;
+    text-decoration: none;
+}
+
+/**
+Decoration header
+**/
+
+header {
+    margin-top: 1.5em;
+    width: 60%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/**
+Decorating text-fields
+**/
+
+.about {
+    margin-top: 1.5em;
+    width: 70%;
+    max-width: 700px;
+    margin: auto;
+    padding: 1em;
+}
+
+
+.text-box {
+    background-color: #E2F3F9;
+    color: #22252B;
+    opacity: 0.85;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+
+/**
+Decorating assignment grid objects
+**/
+
+.assignments {
+    margin: auto;
+    width: 70%;
+    max-width: 700px;
+    text-align: center;
+    padding: 1em;
+}
+
+.assignments-grid {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    color: #22252B;
+    margin: 0 auto;
+}
+
+.assignment {
+    opacity: 0.85;
+    padding: 1em;
+    background-color: #E2F3F9;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.assignment:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.assignment:link {
+    color: #22252B;
+    text-decoration: none;
+}
+
+.assignment:visited {
+    color: #22252B;
+    text-decoration: none;
+}
+
+
+/**
+Decorating other-assignments grid
+**/
+.other-assignments-grid {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    color: #22252B;
+    margin: 0 auto;
+}
+
+/**
+Decorating tasks
+**/
+
+.tasks {
+    opacity: 95%;
+    margin: auto;
+    width: 70%;
+    max-width: 900px;
+    padding: 1em;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
+    max-width: 700px;
+    margin: auto;
+    color: #22252B;
+}
+
+
+#four-tasks {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#six-tasks {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.task {
+    opacity: 0.85;
+    padding: 1em;
+    background-color: #E2F3F9;
+    border-radius: 0.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.task:link {
+    color: #22252B;
+    text-decoration: none;
+}
+
+.task:visited {
+    color: #22252B;
+    text-decoration: none;
+}
+
+.task:hover {
+    opacity: 1;
+    box-shadow: 5px 5px;
+}
+
+.task-content {
+    margin-top: 2.5em;
+}
+
+.task-content h2 {
+    text-align: left;
+}
+
+
+/**
+Decorating links in footer
+**/
+footer a:link {
+    color: #22252B;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #22252B;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #9CB2CE;
+}
+
+
+/**
+Decorating footer
+**/
+
+footer {
+    background-color: #E2F3F9;
+    color: #22252B;
+    opacity: 80%;
+    position: relative;
+    margin-top: 8em;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+
+footer div {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    position: absolute:
+    bottom: 0;
+}
+
+footer div.course {
+    text-align: center;
+}
+
+footer img {
+    width: 10em;
+    position: absolute;
+    right: 0;
+}
+
+/**
+Responsivity
+**/
+
+@media (min-width: 600px) {
+    .assignments-grid {grid-template-columns: repeat(2, 1fr);}
+    .other-assignments-grid {grid-template-columns: repeat(2, 1fr);}
+    h1 {font-size: 70px;}
+}
+
+@media (min-width: 750px) {
+    #six-tasks {grid-template-columns: repeat(6, 1fr);}
+}
+
+@media (min-width: 900px) {
+    .assignments-grid {grid-template-columns: repeat(3, 1fr);}
+    .other-assignments-grid {grid-template-columns: repeat(4, 1fr);}
+    h1 {font-size: 90px;}
+}
+
+@media screen and (max-width: 400px) {
+    footer div {
+        width: 100%;
+    }
+}
